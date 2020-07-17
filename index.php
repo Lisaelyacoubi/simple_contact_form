@@ -29,7 +29,16 @@
 
           if(empty($email)){
             $isSend;
-          }
+      		}
+
+          /*
+          else {
+
+            if (!preg_match("/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/",$email)) {
+            echo "L'email n'est pas valide";
+            }
+          */
+
 
           if(empty($message)){
             $isSend;
@@ -76,19 +85,19 @@
       <form action="index.php" method="post">
         <div class="form-group">
           <label for="exampleFormControlSelect1">Prénom *</label>
-          <input type="text" class="form-control" name="firstname" required placeholder="First name">
+          <input type="text" class="form-control" name="firstname" placeholder="First name">
         </div>
         <div class="form-group">
           <label for="exampleFormControlSelect1">Nom *</label>
-          <input type="text" class="form-control"  name="lastname"  required placeholder="Last name">
+          <input type="text" class="form-control"  name="lastname" placeholder="Last name">
         </div>
         <div class="form-group">
           <label for="exampleFormControlInput1">Email *</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" required name="email" placeholder="name@example.com">
+          <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="name@example.com">
         </div>
         <div class="form-group">
           <label for="exampleFormControlTextarea1">Message *</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" required  name="message" rows="3"></textarea>
+          <textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="3"></textarea>
         </div>
         <div class="form-group">
           <button type="submit" class="btn btn-outline-primary" name="submit">Envoyer</button>
