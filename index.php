@@ -20,22 +20,18 @@
             }
 
       		if(empty($firstName)){
-      			echo 'Le champ Prénom est vide !<br>';
             $isSend;
       		}
 
       		if(empty($lastName)){
-      			echo 'Le champ Nom est vide !<br>';
             $isSend;
       		}
 
           if(empty($email)){
-            echo 'Le champ Email est vide !<br>';
             $isSend;
           }
 
           if(empty($message)){
-            echo 'Le champ Message est vide !<br>';
             $isSend;
           }
 
@@ -79,20 +75,20 @@
       <h2 class="pb-4 text-center">Mon super formulaire en php</h2>
       <form action="index.php" method="post">
         <div class="form-group">
-          <label for="exampleFormControlSelect1">Prénom</label>
-          <input type="text" class="form-control" name="firstname" placeholder="First name">
+          <label for="exampleFormControlSelect1">Prénom *</label>
+          <input type="text" class="form-control" name="firstname" required placeholder="First name">
         </div>
         <div class="form-group">
-          <label for="exampleFormControlSelect1">Nom</label>
-          <input type="text" class="form-control"  name="lastname" placeholder="Last name">
+          <label for="exampleFormControlSelect1">Nom *</label>
+          <input type="text" class="form-control"  name="lastname"  required placeholder="Last name">
         </div>
         <div class="form-group">
-          <label for="exampleFormControlInput1">Email address</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="name@example.com">
+          <label for="exampleFormControlInput1">Email *</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" required name="email" placeholder="name@example.com">
         </div>
         <div class="form-group">
-          <label for="exampleFormControlTextarea1">Example textarea</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="3"></textarea>
+          <label for="exampleFormControlTextarea1">Message *</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" required  name="message" rows="3"></textarea>
         </div>
         <div class="form-group">
           <button type="submit" class="btn btn-outline-primary" name="submit">Envoyer</button>
